@@ -1,0 +1,15 @@
+//----------------------------------------------
+// Story
+//----------------------------------------------
+
+.story > * + * {
+    @include pxsToRems(margin-top, 10);
+}
+
+.story_x2 > * + * {
+    @include pxsToRems(margin-top, 20);
+}
+
+.story_3 > * + * {
+    @include pxsToRems(margin-top, 30);
+}

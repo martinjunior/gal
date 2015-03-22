@@ -19,8 +19,6 @@ module.exports.register = function(Handlebars, options) {
         var relativePath = options.pages[0].relativeLink
                                   .replace(/[a-zA-Z0-9_-]+\.html$/, '');
 
-        console.log('Come one ' + options.pages[0].relativeLink);
-
         return relativePath;
 
     });

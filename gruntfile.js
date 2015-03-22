@@ -108,7 +108,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compressor');
     grunt.loadNpmTasks('assemble');
 
-    grunt.registerTask('default', ['assemble', 'sass', 'copy', 'autoprefixer']);
+    grunt.registerTask('default', ['assemble', 'sass', 'copy', 'autoprefixer', 'compressor']);
 
     grunt.registerTask('prod', ['default', 'compressor']);
 
