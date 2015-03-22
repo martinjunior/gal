@@ -100,6 +100,7 @@ module.exports = function(grunt) {
                     'web/index.html': ['web/index.html'],
                     'web/landscaping-services.html': ['web/landscaping-services.html'],
                     'web/snow-removal.html': ['web/snow-removal.html'],
+                    'web/spring-and-fall-cleanups.html': ['web/spring-and-fall-cleanups.html'],
                     'web/tree-services.html': ['web/tree-services.html']
 
                 }
