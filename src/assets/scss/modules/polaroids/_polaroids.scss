@@ -1,0 +1,30 @@
+//----------------------------------------------
+// Polaroids
+//----------------------------------------------
+
+.polaroids {
+    max-width: 100%;
+    padding-bottom: 56%;
+    position: relative;
+}
+
+.polaroids > * {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    transform: rotate(-1deg);
+}
+
+.polaroids-item {
+    background-size: 100% 100%;
+    -webkit-backface-visibility: hidden;
+}
+
+.polaroids-item_fountain {
+    background-image: setImage('polaroids/fountain.jpg');
+}

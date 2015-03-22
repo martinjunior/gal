@@ -1,0 +1,22 @@
+//----------------------------------------------
+// Containers
+//----------------------------------------------
+
+.content_centered,
+.content-ft_centered,
+.content_centeredSmMd {
+    text-align: center;
+}
+
+.content_constrained {
+    @include pxsToRems(max-width, 700);
+    margin: auto;
+}
+
+.content-hd {
+    @include pxsToRems(margin-bottom, 20);
+}
+
+.content-ft {
+    @include pxsToRems(margin-top, 20);
+}

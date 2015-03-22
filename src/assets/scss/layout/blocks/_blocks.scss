@@ -1,0 +1,19 @@
+//----------------------------------------------
+// Blocks
+//----------------------------------------------
+
+$BLOCKS_GUTTER: $SITE_GUTTERS;
+
+.blocks {
+    @include pxsToRems(margin, (-$BLOCKS_GUTTER) 0 0 (-$BLOCKS_GUTTER));
+    font-size: 0;
+}
+
+.blocks > * {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    @include pxsToRems(padding, $BLOCKS_GUTTER 0 0 $BLOCKS_GUTTER);
+    box-sizing: border-box;
+    @include pxsToRems(font-size, removeUnit($ROOT_FONT_SIZE));
+}

@@ -2,15 +2,33 @@
 <html lang="en">
     <head>
         <meta  charset ="UTF-8"> 
-        <title>{{title}}</title>
-        <link rel="stylesheet" href="assets/css/screen.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <title>{{title}} | Great American Landscaping</title>
+        <link rel="stylesheet" href="{{ assets }}/css/screen.css">
     </head>
     <body>
 
-    {{> body}}
+    {{> _icons}}
 
-    <script data-main="assets/scripts/main" src="assets/vendor/requirejs/require.js"></script>
-    <script src="assets/scripts/config.js"></script>
+    <div class="page">
+
+        <div class="page-hd">
+            {{> _masthead}}
+            {{> _nav}}
+        </div>
+
+        <div class="page-bd">
+            {{> body}}
+        </div>
+
+        <div class="page-ft">
+            {{> _footer}}
+        </div>
+
+    </div>
+
+    <script data-main="{{ assets }}/scripts/main" src="{{ assets }}/vendor/requirejs/require.js"></script>
+    <script src="{{ assets }}/scripts/config.js"></script>
 
     </body>
 </html>

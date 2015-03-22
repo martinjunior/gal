@@ -1,0 +1,22 @@
+//----------------------------------------------
+// Btn
+//----------------------------------------------
+
+.btn {
+    display: inline-block;
+    @include pxsToRems(padding, 10 25);
+    position: relative;
+    border-radius: 5px;
+    border-bottom: 1px solid darken($COLOR_PRIMARY, 10%);
+    background: linear-gradient(to right, $COLOR_PRIMARY, darken($COLOR_PRIMARY, 5%));
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn_md {
+    @include pxsToRems(padding, 10 50);
+}
+
+.btn_lg {
+    @include pxsToRems(padding, 10 75);
+}

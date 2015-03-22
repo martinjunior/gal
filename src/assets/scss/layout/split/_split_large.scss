@@ -1,0 +1,24 @@
+//----------------------------------------------
+// Split
+//----------------------------------------------
+
+$SPLIT_GUTTER: $SITE_GUTTERS * 2;
+
+.split {
+    @include pxsToRems(margin-left, -$SPLIT_GUTTER);
+    font-size: 0;
+}
+
+.split > * {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    @include pxsToRems(padding-left, $SPLIT_GUTTER);
+    box-sizing: border-box;
+    @include pxsToRems(font-size, removeUnit($ROOT_FONT_SIZE));
+}
+
+.split > *:last-child {
+    text-align: right;
+}

@@ -1,0 +1,17 @@
+//----------------------------------------------
+// Nav -large
+//----------------------------------------------
+
+.nav-list {
+    display: table;
+    @include pxsToRems(padding, 0 $SITE_GUTTERS);
+}
+
+.nav-list > * {
+    display: table-cell;
+    text-align: center;
+}
+
+.nav-list-item:hover {
+    background: darken($COLOR_PRIMARY, 10%)
+}

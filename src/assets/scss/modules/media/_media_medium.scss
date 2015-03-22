@@ -1,5 +1,7 @@
 //----------------------------------------------
-// Fonts
+// Media
 //----------------------------------------------
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+.media-img {
+    @include pxsToRems(margin-bottom, 20);
+}

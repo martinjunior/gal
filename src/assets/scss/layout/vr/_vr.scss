@@ -1,0 +1,23 @@
+//----------------------------------------------
+// Vr
+//----------------------------------------------
+
+.vr {
+    @include pxsToRems(margin-bottom, $BASE_SPACING_UNIT);
+}
+
+.vr_x2 {
+    @include pxsToRems(margin-bottom, $BASE_SPACING_UNIT * 2);
+}
+
+.vr_x3 {
+    @include pxsToRems(margin-bottom, $BASE_SPACING_UNIT * 3);
+}
+
+.vr_x4 {
+    @include pxsToRems(margin-bottom, $BASE_SPACING_UNIT * 4);
+}
+
+.vr_x5 {
+    @include pxsToRems(margin-bottom, $BASE_SPACING_UNIT * 5);
+}

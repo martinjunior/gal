@@ -2,8 +2,39 @@
 // Elements
 //----------------------------------------------
 
+html {
+    font-size: $ROOT_FONT_SIZE;
+}
+
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: $FONT_PRIMARY;
-    font-size: $BASE_FONT_SIZE;
+    font-weight: $BASE_FONT_WEIGHT;
     line-height: $BASE_LINE_HEIGHT;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: $COLOR_PRIMARY;
+}
+
+strong {
+    font-weight: $FONT_WEIGHT_BOLD;
+}
+
+hr {
+    width: 100%;
+    height: 0;
+    border: none;
+    border-bottom: 1px solid $COLOR_FAINT;
+    @include pxsToRems(margin, 40 0);
+}
+
+p + p {
+    @include pxsToRems(margin-top, 16);
 }

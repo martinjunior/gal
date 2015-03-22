@@ -1,0 +1,30 @@
+//----------------------------------------------
+// hList
+//----------------------------------------------
+
+.hList > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.hList > * + * {
+    @include pxsToRems(margin-left, $BASE_SPACING_UNIT);
+}
+
+.hList_x2 > * + * {
+    @include pxsToRems(margin-left, $BASE_SPACING_UNIT * 2);
+}
+
+.hList_divided {
+    line-height: 1;
+}
+
+.hList_divided > * + * {
+    @include pxsToRems(padding-left, $BASE_SPACING_UNIT * 2);
+    border-left: 1px solid;
+}
+
+.hList_x2.hList_divided > * + * {
+    @include pxsToRems(padding-left, $BASE_SPACING_UNIT * 3);
+}

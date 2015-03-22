@@ -1,5 +1,7 @@
 //----------------------------------------------
-// Fonts
+// Main
 //----------------------------------------------
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+.main {
+    @include pxsToRems(padding, 40 0);
+}

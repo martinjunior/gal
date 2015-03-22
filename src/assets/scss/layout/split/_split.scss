@@ -1,5 +1,7 @@
 //----------------------------------------------
-// Fonts
+// Split
 //----------------------------------------------
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+.split > * + * {
+    @include pxsToRems(margin-top, 20);
+}

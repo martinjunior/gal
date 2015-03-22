@@ -1,0 +1,10 @@
+//----------------------------------------------
+// Footer
+//----------------------------------------------
+
+.footer {
+    @include pxsToRems(padding, 40 0);
+    border-bottom: 5px solid $COLOR_TERTIARY;
+    background: $COLOR_SECONDARY;
+    color: #ffffff;
+}

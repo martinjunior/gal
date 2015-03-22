@@ -1,0 +1,15 @@
+//----------------------------------------------
+// Media
+//----------------------------------------------
+
+.media {
+    @include clearfix();
+}
+
+.media-img {
+    @include pxsToRems(margin-bottom, 10);
+}
+
+.media-bd {
+    overflow: hidden;
+}

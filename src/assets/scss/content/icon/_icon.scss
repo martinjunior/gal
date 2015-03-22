@@ -1,0 +1,26 @@
+//----------------------------------------------
+// Icon
+//----------------------------------------------
+
+.icon {
+    @include pxsToRems(width, 20);
+    @include pxsToRems(height, 20);
+    display: inline-block;
+    vertical-align: middle;
+    fill: $COLOR_PRIMARY;
+}
+
+.icon_md {
+    @include pxsToRems(width, 40);
+    @include pxsToRems(height, 40);
+}
+
+.icon_lg {
+    @include pxsToRems(width, 60);
+    @include pxsToRems(height, 60);
+}
+
+.icon_xlg {
+    @include pxsToRems(width, 80);
+    @include pxsToRems(height, 80);
+}

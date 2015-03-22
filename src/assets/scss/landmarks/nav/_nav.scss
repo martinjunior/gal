@@ -1,0 +1,24 @@
+//----------------------------------------------
+// Nav
+//----------------------------------------------
+
+.nav {
+    background: $COLOR_SECONDARY;
+}
+
+.nav-list {
+    width: 100%;
+    @include pxsToRems(max-width, $SITE_WIDTH);
+    margin: auto;
+}
+
+.nav-list-item {
+    display: block;
+    @include pxsToRems(padding, 10 15);
+    border-left: 1px solid darken($COLOR_TERTIARY, 10%);
+    border-right: 1px solid darken($COLOR_TERTIARY, 10%);
+    background: $COLOR_TERTIARY;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background .15s linear;
+}

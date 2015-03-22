@@ -11,3 +11,38 @@
 
     &:after { clear: both; }
 }
+
+@mixin wrapper() {
+    @include pxsToRems(max-width, $SITE_WIDTH);
+    @include pxsToRems(padding, 0 $SITE_GUTTERS);
+    margin: auto;
+    position: relative;
+
+    @media(min-width: $BP_MD) {
+        @include pxsToRems(padding, 0 $SITE_GUTTERS * 5);
+    }
+
+    @media(min-width: $BP_LG) {
+        @include pxsToRems(padding, 0 $SITE_GUTTERS);
+    }
+}
+
+@mixin pxsToRems($property, $values) {
+    $px: ();
+    $rem: ();
+
+    $unit-less-base-font-size: $ROOT_FONT_SIZE / ($ROOT_FONT_SIZE * 0 + 1);
+
+    @each $value in $values {
+        @if $value == 0 or $value == auto {
+            $px: append($px, $value);
+            $rem: append($rem, $value);
+        } @else {
+            $px: append($px, $value + px);
+            $rem: append($rem, ($value / $unit-less-base-font-size) + rem);
+        }
+    }
+
+    #{$property}: $px;
+    #{$property}: $rem;
+}

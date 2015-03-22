@@ -1,0 +1,17 @@
+//----------------------------------------------
+// Media
+//----------------------------------------------
+
+.media-img {
+    float: left;
+    margin: 0;
+    @include pxsToRems(margin-right, 10);
+}
+
+.media-img_x2 {
+    @include pxsToRems(margin-right, 20);
+}
+
+.media-img_x3 {
+    @include pxsToRems(margin-right, 30);
+}

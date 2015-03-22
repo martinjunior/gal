@@ -1,0 +1,23 @@
+//----------------------------------------------
+// Grid
+//----------------------------------------------
+
+.grid-col {
+    margin: 0;
+}
+
+.grid-col_1of12 { width: 8.33%; }
+.grid-col_2of12 { width: 16.66%; }
+.grid-col_3of12 { width: 25%; }
+.grid-col_4of12 { width: 33.33%; }
+.grid-col_5of12 { width: 41.66%; }
+.grid-col_6of12 { width: 50%; }
+.grid-col_7of12 { width: 58.33%; }
+.grid-col_8of12 { width: 66.66%; }
+.grid-col_9of12 { width: 75%; }
+.grid-col_10of12 { width: 83.33%; }
+.grid-col_11of12 { width: 91.66%; }
+.grid-col_12of12 { width: 100%;}
+
+.grid-col_main { width: 70%; }
+.grid-col_aside { width: 30%; }

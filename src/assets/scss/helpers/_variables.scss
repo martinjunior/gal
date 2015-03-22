@@ -4,22 +4,30 @@
 
 $PATH_TO_IMAGES: "../images/";
 
-$SITE_WIDTH: "960px";
+$SITE_WIDTH: 960;
+$SITE_GUTTERS: 25;
 
 // Base styles
-$BASE_FONT_SIZE: 16px;
-$BASE_LINE_HEIGHT: 1.6;
+$ROOT_FONT_SIZE: 16px;
+$BASE_LINE_HEIGHT: 1.5;
+$BASE_SPACING_UNIT: 5;
+$BASE_FONT_WEIGHT: 400;
 
 // Fonts
-$FONT_PRIMARY: "Arial, sans-serif";
+$FONT_PRIMARY: 'Open Sans', sans-serif;
 $FONT_SECONDARY: "";
 $FONT_SERIF: "";
+$FONT_WEIGHT_LIGHT: 300;
+$FONT_WEIGHT_BOLD: 600;
 
 // Colors
-$COLOR_BRAND: "";
-$COLOR_ACCENT: "";
+$COLOR_PRIMARY: #dd0000;
+$COLOR_SECONDARY: #33291f;
+$COLOR_TERTIARY: #1d1711;
+
+$COLOR_FAINT: #f1f1f1;
 
 // Breakpoints
-$BP_SM: "560px";
-$BP_MD: "768px";
-$BP_LG: "960px";
+$BP_SM: 560px;
+$BP_MD: 768px;
+$BP_LG: 960px;

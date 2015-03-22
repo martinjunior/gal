@@ -51,12 +51,19 @@ module.exports = function(grunt) {
             options: {},
             site: {
                 options: {
+                    helpers: ['src/helpers/*.js'],
                     partials: ['src/partials/**/*.hbs'],
-                    layout: ['src/layouts/default.hbs']
+                    layout: ['src/layouts/default.hbs'],
+                    assets: 'web/assets'
                 },
                 expand: true,
                 cwd: 'src/',
-                src: ['*.hbs'],
+                src: [
+                    '*.hbs',
+                    '**/*.hbs',
+                    '!partials/**/*.hbs',
+                    '!layouts/**/*.hbs'
+                ],
                 dest: 'web/'
             }
         }

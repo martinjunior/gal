@@ -1,0 +1,13 @@
+//----------------------------------------------
+// Masthead
+//----------------------------------------------
+
+.masthead-wrapper-box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    @include pxsToRems(right, $SITE_GUTTERS);
+    text-align: right;
+    transform: translateY(-50%);
+    @include pxsToRems(font-size, 18);
+}

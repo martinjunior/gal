@@ -1,0 +1,12 @@
+//----------------------------------------------
+// Logo
+//----------------------------------------------
+
+.logo {
+    display: block;
+    @include pxsToRems(width, 250);
+    @include pxsToRems(height, 96);
+    background-image: setImage('shared/great-american-landscaping-logo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

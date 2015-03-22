@@ -1,0 +1,17 @@
+//----------------------------------------------
+// Masthead
+//----------------------------------------------
+
+.masthead {
+    background-image: linear-gradient(to bottom, #f1ecd9, #e0d8ba, #dcd3b2);
+    border-bottom: 1px solid darken(#dcd3b2, 10%);
+    border-top: 5px solid $COLOR_SECONDARY;
+}
+
+.masthead-wrapper {
+    @include wrapper();
+}
+
+.masthead-wrapper-box {
+    display: none;
+}

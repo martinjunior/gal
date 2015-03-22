@@ -1,0 +1,31 @@
+//----------------------------------------------
+// Hdg
+//----------------------------------------------
+
+.hdg {
+    line-height: 1.2;
+}
+
+.hdg_1 {
+    @include pxsToRems(font-size, 28);
+}
+
+.hdg_2 {
+    @include pxsToRems(font-size, 24);
+}
+
+.hdg_3 {
+    @include pxsToRems(font-size, 20);
+}
+
+.hdg_4 {
+    @include pxsToRems(font-size, 16);
+}
+
+.hdg_bold {
+    font-weight: $FONT_WEIGHT_BOLD;
+}
+
+.hdg_light {
+    font-weight: $FONT_WEIGHT_LIGHT;
+}

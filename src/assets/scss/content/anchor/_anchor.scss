@@ -1,0 +1,31 @@
+//----------------------------------------------
+// Anchor
+//----------------------------------------------
+
+.anchor {
+    text-decoration: none;
+}
+
+.anchor:hover {
+    text-decoration: underline;
+}
+
+.anchor_xxlg {
+    @include pxsToRems(font-size, 22);
+}
+
+.anchor_xlg {
+    @include pxsToRems(font-size, 20);
+}
+
+.anchor_lg {
+    @include pxsToRems(font-size, 18);
+}
+
+.anchor_sm {
+    @include pxsToRems(font-size, 14);
+}
+
+.anchor_xsm {
+    @include pxsToRems(font-size, 12);
+}

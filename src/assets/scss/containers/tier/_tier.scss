@@ -1,0 +1,13 @@
+//----------------------------------------------
+// Tier
+//----------------------------------------------
+
+.tier {
+    @include pxsToRems(padding, 50 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.tier_faint {
+    background: linear-gradient(to bottom, $COLOR_FAINT, darken($COLOR_FAINT, 5%));
+}

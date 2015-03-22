@@ -1,0 +1,23 @@
+//----------------------------------------------
+// Txt
+//----------------------------------------------
+
+.txt_xxlg {
+    @include pxsToRems(font-size, 22);
+}
+
+.txt_xlg {
+    @include pxsToRems(font-size, 20);
+}
+
+.txt_lg {
+    @include pxsToRems(font-size, 18);
+}
+
+.txt_sm {
+    @include pxsToRems(font-size, 14);
+}
+
+.txt_xsm {
+    @include pxsToRems(font-size, 12);
+}
