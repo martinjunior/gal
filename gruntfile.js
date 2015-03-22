@@ -87,14 +87,14 @@ module.exports = function(grunt) {
             }
         },
 
-        htmlmin: {
-            dist: {
-                options: {
+        compressor:{
+            html:{
+                options:{
                     removeComments: true,
                     collapseWhitespace: true
                 },
-                files: {
-                    'web/index.html': 'web/index.html'
+                files:{
+                    'web/index.html': ['web/index.html']
                 }
             }
         }
@@ -105,11 +105,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-compressor');
     grunt.loadNpmTasks('assemble');
 
     grunt.registerTask('default', ['assemble', 'sass', 'copy', 'autoprefixer']);
 
-    grunt.registerTask('prod', ['default', 'htmlmin']);
+    grunt.registerTask('prod', ['default', 'compressor']);
 
 };
