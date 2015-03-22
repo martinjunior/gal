@@ -1,8 +1,1 @@
-require(
-	[
-		'App'
-	],
-	function(App) {
-		window.App = new App();
-	}
-);
+define("App",["require","exports","module"],function(){"use strict";{var e=function(){};e.prototype}return e});require(["App"],function(e){window.App=new e});define("main",function(){});

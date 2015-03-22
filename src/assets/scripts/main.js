@@ -1,8 +1,8 @@
 require(
-	[
-		'App'
-	],
-	function(App) {
-		window.App = new App();
-	}
+    [
+        'App'
+    ],
+    function(App) {
+        window.App = new App();
+    }
 );

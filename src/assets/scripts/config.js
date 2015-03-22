@@ -1,11 +1,11 @@
 require.config({
     paths: {
         requirejs: '../vendor/requirejs/require',
-        jquery: '../vendor/jquery/jquery',
-        velocity: '../vendor/velocity/velocity'
+        jQuery: '../vendor/jquery/jquery.min',
+        velocity: '../vendor/velocity/velocity.min'
     },
     shim: {
-        jquery: {
+        jQuery: {
             exports: '$'
         },
         velocity: {

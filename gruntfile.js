@@ -88,14 +88,60 @@ module.exports = function(grunt) {
         },
 
         compressor:{
+            js:{
+                options:{
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'web/assets/vendor/requirejs/require.js': ['web/assets/vendor/requirejs/require.js'],
+                    'web/assets/scripts/config.js': ['web/assets/scripts/config.js']
+                }
+            },
             html:{
                 options:{
                     removeComments: true,
                     collapseWhitespace: true
                 },
-                files:{
+                files: {
                     'web/index.html': ['web/index.html'],
                     'web/landscaping-services.html': ['web/landscaping-services.html']
+                }
+            }
+        },
+
+        requirejs: {
+            options: {
+                baseUrl: 'src/assets/scripts',
+                mainConfigFile: 'src/assets/scripts/config.js',
+                generateSourceMaps: grunt.option('maps'),
+                preserveLicenseComments: grunt.option('no-maps'),
+                useStrict: true,
+                pragmas: {
+                    isProd: grunt.option('prod'),
+                    isStage: grunt.option('stage'),
+                    isDev: grunt.option('dev')
+                },
+                optimize: 'uglify2',
+                uglify2: {
+                    output: {
+                        beautify: false,
+                        comments: false
+                    },
+                    compress: {
+                        sequences: false,
+                        global_defs: {
+                            DEBUG: false
+                        }
+                    },
+                    warnings: false,
+                    mangle: true
+                }
+            },
+            buildScripts: {
+                options: {
+                    name: 'main',
+                    out: 'web/assets/scripts/main.js'
                 }
             }
         }
@@ -107,10 +153,19 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-compressor');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('assemble');
 
-    grunt.registerTask('default', ['assemble', 'sass', 'copy', 'autoprefixer', 'compressor']);
+    grunt.registerTask(
+        'default',
+        [
+            'assemble',
+            'sass',
+            'copy',
+            'autoprefixer'
+        ]
+    );
 
-    grunt.registerTask('prod', ['default', 'compressor']);
+    grunt.registerTask('prod', ['default', 'requirejs', 'compressor']);
 
 };
