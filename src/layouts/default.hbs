@@ -8,27 +8,24 @@
     </head>
     <body>
 
-    {{> _icons}}
+        {{> _icons}}
 
-    <div class="page">
+        <div class="page">
 
-        <div class="page-hd">
-            {{> _masthead}}
-            {{> _nav}}
+            <div class="page-hd">
+                {{> _masthead}}
+                {{> _nav}}
+            </div>
+
+            <div class="page-bd">
+                {{> body}}
+            </div>
+
+            <div class="page-ft">
+                {{> _footer}}
+            </div>
+
         </div>
-
-        <div class="page-bd">
-            {{> body}}
-        </div>
-
-        <div class="page-ft">
-            {{> _footer}}
-        </div>
-
-    </div>
-
-    <script data-main="{{ assets }}/scripts/main" src="{{ assets }}/vendor/requirejs/require.js"></script>
-    <script src="{{ assets }}/scripts/config.js"></script>
-
+    
     </body>
 </html>
