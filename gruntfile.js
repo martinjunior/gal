@@ -30,6 +30,7 @@ module.exports = function(grunt) {
                         cwd: 'src/',
                         src: [
                             'assets/**',
+                            '!assets/images/**',
                             '!assets/scss/**',
                             '!assets/scripts/*'
                         ],
@@ -95,8 +96,12 @@ module.exports = function(grunt) {
                     collapseWhitespace: true
                 },
                 files: {
+                    'web/hardscaping-services.html': ['web/hardscaping-services.html'],
                     'web/index.html': ['web/index.html'],
-                    'web/landscaping-services.html': ['web/landscaping-services.html']
+                    'web/landscaping-services.html': ['web/landscaping-services.html'],
+                    'web/snow-removal.html': ['web/snow-removal.html'],
+                    'web/tree-services.html': ['web/tree-services.html']
+
                 }
             }
         },
@@ -147,6 +152,17 @@ module.exports = function(grunt) {
                     'web/assets/scripts/config.js': ['src/assets/scripts/config.js']
                 }
             }
+        },
+
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/assets/images/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'web/assets/images/'
+                }]
+            }
         }
 
     });
@@ -158,6 +174,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compressor');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('assemble');
 
     grunt.registerTask(
@@ -169,7 +186,8 @@ module.exports = function(grunt) {
             'autoprefixer',
             'requirejs',
             'uglify',
-            'compressor'
+            'compressor',
+            'imagemin'
         ]
     );
 

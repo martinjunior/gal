@@ -5,7 +5,7 @@
 .uList {
     list-style: disc;
     list-style-position: outside;
-    @include pxsToRems(margin-left, 32);
+    @include pxsToRems(margin-left, 16);
 }
 
 .uList > * + * {

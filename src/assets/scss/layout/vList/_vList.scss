@@ -1,0 +1,23 @@
+//----------------------------------------------
+// vList
+//----------------------------------------------
+
+.vList > * + * {
+    @include pxsToRems(margin-top, $BASE_SPACING_UNIT);
+}
+
+.vList_x2 > * + * {
+    @include pxsToRems(margin-top, $BASE_SPACING_UNIT * 2);
+}
+
+.vList_x3 > * + * {
+    @include pxsToRems(margin-top, $BASE_SPACING_UNIT * 3);
+}
+
+.vList_x4 > * + * {
+    @include pxsToRems(margin-top, $BASE_SPACING_UNIT * 4);
+}
+
+.vList_x5 > * + * {
+    @include pxsToRems(margin-top, $BASE_SPACING_UNIT * 5);
+}
