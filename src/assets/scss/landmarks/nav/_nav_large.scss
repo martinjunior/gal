@@ -10,16 +10,20 @@
     overflow: visible;
     background: $COLOR_SECONDARY;
     opacity: 1 !important; // Fight isActive mobile styles
+    transition: z-index 0s linear,
+                opacity 0s linear;
 }
 
 .nav-list {
     width: 100%;
+    @include pxsToRems(max-width, $SITE_WIDTH);
     min-height: 0;
     display: table;
     margin: auto;
     @include pxsToRems(padding, 0 $SITE_GUTTERS);
     background: none;
     transform: none !important; // Fight isActive mobile styles
+    transition: transform 0 linear;
 }
 
 .nav-list > * {

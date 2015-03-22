@@ -25,7 +25,7 @@
 
 .nav-list {
     width: 80%;
-    @include pxsToRems(max-width, $SITE_WIDTH);
+    @include pxsToRems(max-width, 600);
     min-height: 100vh;
     position: relative;
     z-index: 10;
