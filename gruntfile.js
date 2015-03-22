@@ -30,7 +30,8 @@ module.exports = function(grunt) {
                         cwd: 'src/',
                         src: [
                             'assets/**',
-                            '!assets/scss/**'
+                            '!assets/scss/**',
+                            '!assets/scripts/*'
                         ],
                         dest: 'web/'
                     }
@@ -88,16 +89,6 @@ module.exports = function(grunt) {
         },
 
         compressor:{
-            js:{
-                options:{
-                    removeComments: true,
-                    collapseWhitespace: true
-                },
-                files: {
-                    'web/assets/vendor/requirejs/require.js': ['web/assets/vendor/requirejs/require.js'],
-                    'web/assets/scripts/config.js': ['web/assets/scripts/config.js']
-                }
-            },
             html:{
                 options:{
                     removeComments: true,
@@ -144,6 +135,18 @@ module.exports = function(grunt) {
                     out: 'web/assets/scripts/main.js'
                 }
             }
+        },
+
+        uglify: {
+            options: {
+                compress: true
+            },
+            my_target: {
+                files: {
+                    'web/assets/vendor/requirejs/require.js': ['src/assets/vendor/requirejs/require.js'],
+                    'web/assets/scripts/config.js': ['src/assets/scripts/config.js']
+                }
+            }
         }
 
     });
@@ -154,6 +157,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-compressor');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('assemble');
 
     grunt.registerTask(
@@ -162,10 +166,11 @@ module.exports = function(grunt) {
             'assemble',
             'sass',
             'copy',
-            'autoprefixer'
+            'autoprefixer',
+            'requirejs',
+            'uglify',
+            'compressor'
         ]
     );
-
-    grunt.registerTask('prod', ['default', 'requirejs', 'compressor']);
 
 };
