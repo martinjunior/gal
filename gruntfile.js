@@ -94,7 +94,8 @@ module.exports = function(grunt) {
                     collapseWhitespace: true
                 },
                 files:{
-                    'web/index.html': ['web/index.html']
+                    'web/index.html': ['web/index.html'],
+                    'web/landscaping-services.html': ['web/landscaping-services.html']
                 }
             }
         }
