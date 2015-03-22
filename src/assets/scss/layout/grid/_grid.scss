@@ -19,3 +19,7 @@ $GRID_GUTTER: $SITE_GUTTERS * 2;
 .grid-col + .grid-col {
     @include pxsToRems(margin-top, 20);
 }
+
+.grid_lg .grid-col + .grid-col {
+    margin-top: 0;
+}

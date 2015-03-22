@@ -2,8 +2,10 @@
 // Grid
 //----------------------------------------------
 
-.grid-col {
-    margin: 0;
+$BASE_GRID_COL_WIDTH: 8.33%;
+
+.grid-col + .grid-col {
+    margin-top: 0;
 }
 
 .grid-col_1of12 { width: 8.33%; }
@@ -21,3 +23,7 @@
 
 .grid-col_main { width: 70%; }
 .grid-col_aside { width: 30%; }
+
+.grid-col_push_2 {
+    margin-left: $BASE_GRID_COL_WIDTH * 2;
+}

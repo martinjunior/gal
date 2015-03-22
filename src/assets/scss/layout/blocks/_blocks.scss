@@ -17,3 +17,11 @@ $BLOCKS_GUTTER: $SITE_GUTTERS;
     box-sizing: border-box;
     @include pxsToRems(font-size, removeUnit($ROOT_FONT_SIZE));
 }
+
+.blocks_lg {
+    margin: 0;
+}
+
+.blocks_lg > * {
+    padding: 0;
+}

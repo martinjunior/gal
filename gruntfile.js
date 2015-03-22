@@ -181,9 +181,10 @@ module.exports = function(grunt) {
     grunt.registerTask(
         'default',
         [
-            'assemble',
             'sass',
-            'copy',
+            'copy:critical',
+            'assemble',
+            'copy:main',
             'autoprefixer',
             'requirejs',
             'uglify',

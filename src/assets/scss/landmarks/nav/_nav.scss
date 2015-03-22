@@ -3,13 +3,38 @@
 //----------------------------------------------
 
 .nav {
-    background: $COLOR_SECONDARY;
+    width: 100%;
+    height: 100%;
+    background: rgba($COLOR_TERTIARY, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: auto;
+    opacity: 0;
+    transition: z-index 0s .25s linear,
+                opacity .1s .15s linear;
+}
+
+.nav.isActive {
+    z-index: 10;
+    opacity: 1;
+    transition: opacity .15s linear,
+                z-index 0s linear;
 }
 
 .nav-list {
-    width: 100%;
+    width: 80%;
     @include pxsToRems(max-width, $SITE_WIDTH);
-    margin: auto;
+    position: relative;
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: transform .15s cubic-bezier(.55, .34, .83, .67);
+}
+
+.nav.isActive .nav-list {
+    transform: translateX(0);
+    transition: transform .2s .1s cubic-bezier(.55, .34, .83, .67);
 }
 
 .nav-list-item {
@@ -21,4 +46,11 @@
     color: #ffffff;
     text-decoration: none;
     transition: background .15s linear;
+}
+
+.nav-list-menu {
+    @include pxsToRems(padding, 10 15);
+    box-sizing: border-box;
+    background: darken($COLOR_TERTIARY, 10%);
+    text-align: left;
 }
