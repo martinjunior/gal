@@ -26,8 +26,10 @@
 .nav-list {
     width: 80%;
     @include pxsToRems(max-width, $SITE_WIDTH);
+    min-height: 100vh;
     position: relative;
     z-index: 10;
+    background: $COLOR_TERTIARY;
     transform: translateX(-100%);
     transition: transform .15s cubic-bezier(.55, .34, .83, .67);
 }

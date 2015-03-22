@@ -5,15 +5,21 @@
 .nav {
     width: auto;
     height: auto;
-    position: static;
+    position: relative;
+    z-index: 20 !important; // Fight isActive mobile styles
+    overflow: visible;
     background: $COLOR_SECONDARY;
+    opacity: 1 !important; // Fight isActive mobile styles
 }
 
 .nav-list {
     width: 100%;
+    min-height: 0;
     display: table;
     margin: auto;
     @include pxsToRems(padding, 0 $SITE_GUTTERS);
+    background: none;
+    transform: none !important; // Fight isActive mobile styles
 }
 
 .nav-list > * {
@@ -33,7 +39,7 @@
     position: absolute;
     top: 100%;
     @include pxsToRems(left, 25);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
 }
 
 .nav-list > *:hover .nav-list-menu {
