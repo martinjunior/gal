@@ -35,6 +35,25 @@ module.exports = function(grunt) {
                         dest: 'web/'
                     }
                 ]
+            },
+            critical: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'web/assets/css/',
+                        src: ['screen.css'],
+                        dest: 'src/partials/',
+                        filter: 'isFile',
+                        rename: function(dest, src) {
+                            return dest + '_critical-css.hbs';
+                        }
+                    }
+                ],
+                options: {
+                    process: function (content, srcpath) {
+                        return content.replace(/url\(\.\./g, 'url(assets');
+                    }
+                }
             }
         },
 
