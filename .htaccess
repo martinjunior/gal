@@ -1,0 +1,6 @@
+# mdwd.us staging version
+AddHandler x-mapp-php5 .html .htm
+
+# MAMP version
+AddType application/x-httpd-php .html .htm
+AddHandler application/x-httpd-php .html .htm

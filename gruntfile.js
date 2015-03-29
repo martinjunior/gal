@@ -29,6 +29,7 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'src/',
                         src: [
+                            'config.php',
                             'assets/**',
                             '!assets/scss/**',
                             '!assets/scripts/*'
@@ -68,7 +69,9 @@ module.exports = function(grunt) {
         },
 
         assemble: {
-            options: {},
+            options: {
+                data: 'src/data/*.json'
+            },
             site: {
                 options: {
                     helpers: ['src/helpers/*.js'],
@@ -167,8 +170,20 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('assemble');
 
-    grunt.registerTask(
-        'default',
+    grunt.registerTask('default', 'Compile source to web',
+        grunt.option('prod') ? ['prod'] : ['build']
+    );
+
+    grunt.registerTask('build',
+        [
+            'sass',
+            'autoprefixer',
+            'assemble',
+            'copy:main'
+        ]
+    );
+
+    grunt.registerTask('prod',
         [
             'sass',
             'autoprefixer',
