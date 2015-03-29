@@ -2,8 +2,8 @@
 AddHandler x-mapp-php5 .html .htm
 
 # MAMP version
-# AddType application/x-httpd-php .html .htm
-# AddHandler application/x-httpd-php .html .htm
+AddType application/x-httpd-php .html .htm
+AddHandler application/x-httpd-php .html .htm
 
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/html
