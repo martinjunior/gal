@@ -100,10 +100,13 @@ module.exports = function(grunt) {
                 files: {
                     'web/hardscaping-services.html': ['web/hardscaping-services.html'],
                     'web/index.html': ['web/index.html'],
+                    'web/landscape-design.html': ['web/landscape-design.html'],
+                    'web/landscape-grading.html': ['web/landscape-grading.html'],
                     'web/landscaping-services.html': ['web/landscaping-services.html'],
                     'web/snow-removal.html': ['web/snow-removal.html'],
                     'web/lawn-maintenance-services.html': ['web/lawn-maintenance-services.html'],
                     'web/planting-services.html': ['web/planting-services.html'],
+                    'web/seeding-services.html': ['web/seeding-services.html'],
                     'web/spring-and-fall-cleanups.html': ['web/spring-and-fall-cleanups.html'],
                     'web/tree-services.html': ['web/tree-services.html']
 
