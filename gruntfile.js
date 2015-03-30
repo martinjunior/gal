@@ -98,18 +98,24 @@ module.exports = function(grunt) {
                     collapseWhitespace: true
                 },
                 files: {
+                    'web/brick-patios.html': ['web/brick-patios.html'],
+                    'web/brick-patios-wheaton.html': ['web/brick-patios-wheaton.html'],
                     'web/hardscaping-services.html': ['web/hardscaping-services.html'],
                     'web/index.html': ['web/index.html'],
                     'web/landscape-design.html': ['web/landscape-design.html'],
                     'web/landscape-grading.html': ['web/landscape-grading.html'],
                     'web/landscaping-services.html': ['web/landscaping-services.html'],
+                    'web/landscaping-wheaton.html': ['web/landscaping-wheaton.html'],
                     'web/snow-removal.html': ['web/snow-removal.html'],
                     'web/lawn-maintenance-services.html': ['web/lawn-maintenance-services.html'],
+                    'web/masonry-work.html': ['web/masonry-work.html'],
+                    'web/paver-stones.html': ['web/paver-stones.html'],
                     'web/planting-services.html': ['web/planting-services.html'],
+                    'web/retaining-walls.html': ['web/retaining-walls.html'],
                     'web/seeding-services.html': ['web/seeding-services.html'],
                     'web/spring-and-fall-cleanups.html': ['web/spring-and-fall-cleanups.html'],
+                    'web/stone-work.html': ['web/stone-work.html'],
                     'web/tree-services.html': ['web/tree-services.html']
-
                 }
             }
         },
