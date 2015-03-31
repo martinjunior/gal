@@ -74,6 +74,8 @@ define(function(require, exports, module) {
             url: 'functions/send.php',
             data: this.$element.serialize()
         }).success(function(data) {
+            console.log(data);
+            
             this.clearInputs();
         }.bind(this));
     }

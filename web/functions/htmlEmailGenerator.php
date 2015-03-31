@@ -18,10 +18,26 @@
              // If this field has been filled out, it's most likely spam.
              // Form won't submit if this field is filled out.
             if ($key !== 'comments' && $key !== 'action') {
-            $htmlEmail .=             '<tr style="border-bottom:1px solid #cccccc;">';
-            $htmlEmail .=                 '<td style="padding:10px 15px;vertical-align:middle;">' . $key . '</td>';
-            $htmlEmail .=                 '<td style="padding:10px 15px;vertical-align:middle;">' . $value . '</td>';
-            $htmlEmail .=             '</tr>';
+                $htmlEmail .=         '<tr style="border-bottom:1px solid #cccccc;">';
+                $htmlEmail .=             '<td style="padding:10px 15px;vertical-align:middle;">' . str_replace('_', ' ', $key) . '</td>';
+
+                if (is_array($value)) {
+                    $htmlEmail .=         '<td style="padding:10px 15px;vertical-align:middle;">';
+
+                    foreach ($value as $key=>$value) {
+                        if ($key !== 0) {
+                            $htmlEmail .=     ', ';
+                        }
+
+                        $htmlEmail .=         $value;
+                    }
+
+                    $htmlEmail .=         '</td>';
+                } else {
+                    $htmlEmail .=         '<td style="padding:10px 15px;vertical-align:middle;">' . $value . '</td>';
+                }
+
+                $htmlEmail .=         '</tr>';
             }
         }
 
