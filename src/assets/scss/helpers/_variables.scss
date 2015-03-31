@@ -27,6 +27,8 @@ $COLOR_TERTIARY: #1d1711;
 
 $COLOR_FAINT: #f1f1f1;
 
+$COLOR_ERROR: lighten($COLOR_PRIMARY, 10%);
+
 // Breakpoints
 $BP_SM: 560px;
 $BP_MD: 768px;

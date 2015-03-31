@@ -7,10 +7,16 @@
     @include pxsToRems(padding, 10 25);
     position: relative;
     border-radius: 5px;
+    border: none;
     border-bottom: 1px solid darken($COLOR_PRIMARY, 10%);
     background: linear-gradient(to right, $COLOR_PRIMARY, darken($COLOR_PRIMARY, 5%));
     color: #ffffff;
+    @include pxsToRems(font-size, 16);
+    font-family: $FONT_PRIMARY;
+    font-weight: normal;
+    line-height: 1.2;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .btn_md {

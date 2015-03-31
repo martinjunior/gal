@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'src/',
                         src: [
-                            'config.php',
+                            'functions/*.php',
                             'assets/**',
                             '!assets/scss/**',
                             '!assets/scripts/*'
@@ -100,6 +100,7 @@ module.exports = function(grunt) {
                 files: {
                     'web/brick-patios.html': ['web/brick-patios.html'],
                     'web/brick-patios-wheaton.html': ['web/brick-patios-wheaton.html'],
+                    'web/contact-us.html': ['web/contact-us.html'],
                     'web/hardscaping-services.html': ['web/hardscaping-services.html'],
                     'web/index.html': ['web/index.html'],
                     'web/landscape-design.html': ['web/landscape-design.html'],
@@ -188,7 +189,8 @@ module.exports = function(grunt) {
             'sass',
             'autoprefixer',
             'assemble',
-            'copy:main'
+            'copy:main',
+            'requirejs'
         ]
     );
 
