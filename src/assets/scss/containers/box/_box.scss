@@ -4,5 +4,14 @@
 
 .box {
     @include pxsToRems(padding, 20);
+    position: relative;
     background: $COLOR_FAINT;
+}
+
+.box_success {
+    background: #d5efd6;
+}
+
+.box_error {
+    background: #fae4e5;
 }

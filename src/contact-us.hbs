@@ -23,7 +23,32 @@ description:
                     <h2 class="hdg hdg_3">Contact Great American Landscaping</h2>
                     <p>Great American Landscaping is trusted by many across the Glen Ellyn, IL, area as quality landscapers who can convert your landscaping visions into reality. From lawn care maintenance to custom brick patio design, Great American Landscaping does it all. Interested in our service? Use the contact form bellow to get in touch with a quality landscaper.</p>
                     <hr>
-                    <form action="#" class="box js-form" role="form" novalidate>
+                    <div
+                        style="display:none;"
+                        role="alert"
+                        tabindex="-1"
+                        class="box box_success js-form-successMessage">
+
+                        <div class="vr">
+                            <div class="hdg hdg_4">Thank you for contacting Great American Landscaping</div>
+                        </div>
+                        <p>We appreciate the contact. You may expect a response within 24 hours.</p>
+                    </div>
+                    <div
+                        style="display:none;"
+                        role="alert"
+                        tabindex="-1"
+                        class="box box_error js-form-errorMessage">
+
+                        <div class="hdg hdg_4">Oops, we encountered an error. Please try again.</div>
+                    </div>
+                    <form
+                        action="#"
+                        class="box js-form"
+                        role="form"
+                        data-success-message=".js-form-successMessage"
+                        data-error-message=".js-form-errorMessage"
+                        novalidate>
                         <div class="vList vList_x3">
                             <div>
                                 <label for="name">Name:</label>
@@ -112,7 +137,7 @@ description:
                                     class="input input_textarea"></textarea>
                             </div>
                             <div>
-                                <button class="btn btn_lg js-form-submit">Sumbit</button>
+                                <button class="btn btn_lg js-form-submit">Submit</button>
                             </div>
                         </div>
                     </form>

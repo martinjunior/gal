@@ -16,6 +16,10 @@ define(function(require, exports, module) {
 
         this.$reverseCaptcha = this.$inputs.filter('[name="referral"]');
 
+        this.$successMessage = $(this.$element.data('success-message'));
+
+        this.$errorMessage = $(this.$element.data('error-message'));
+
         this.numOfReqFields = this.$requiredInputs.length;
 
         this.$submit = this.$element.find('.js-form-submit');
@@ -34,6 +38,8 @@ define(function(require, exports, module) {
         this._onSubmitHandler = this._onSubmit.bind(this);
 
         this._onSuccessHandler = this._onSuccess.bind(this);
+
+        this._onFailHandler = this._onFail.bind(this);
 
         return this;
     }
@@ -100,19 +106,43 @@ define(function(require, exports, module) {
             }
         ).success(
             this._onSuccessHandler
+        ).fail(
+            this._onFailHandler
         );
+    }
+
+    proto.hideMessages = function(success) {
+        this.$successMessage.hide();
+        this.$errorMessage.hide();
+    }
+
+    proto.showMessage = function(success) {
+        if (success) {
+            this.$successMessage.show();
+
+            return;
+        }
+
+        this.$errorMessage.show();
     }
 
     proto._onSuccess = function(data) {
         this.clearInputs();
 
         this.$element.addClass('isActive');
+
+        this.showMessage(true);
+    }
+
+    proto._onFail = function() {
+        this.showMessage();
     }
 
     proto._onSubmit = function(event) {
         event.preventDefault();
 
         if (this.isValid() && !this.$reverseCaptcha.val()) {
+            this.hideMessages();
             this.send();
         }
     }
