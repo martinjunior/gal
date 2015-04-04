@@ -139,9 +139,7 @@ define(function(require, exports, module) {
     proto._onSuccess = function(data) {
         this.clearInputs();
 
-        this.$element.addClass('isActive');
-
-        this.showMessage(true);
+        this.showMessage(data);
     }
 
     proto._onFail = function() {

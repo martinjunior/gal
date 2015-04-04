@@ -53,6 +53,6 @@
 .nav-list-menu {
     @include pxsToRems(padding, 10 15);
     box-sizing: border-box;
-    background: darken($COLOR_TERTIARY, 10%);
+    background: $COLOR_SECONDARY;
     text-align: left;
 }

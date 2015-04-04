@@ -12,7 +12,7 @@
 
     // Reverse captcha
     if ($_POST['referral'] == '') {
-        mail(
+        echo mail(
             'martinduranwebdesign@gmail.com',
             'Website Contact - Great American Landscaping',
             $htmlEmail,
