@@ -43,7 +43,7 @@ description:
                         <div class="hdg hdg_4">Oops, we encountered an error. Please try again.</div>
                     </div>
                     <form
-                        action="#"
+                        action="functions/send.php"
                         class="box js-form"
                         role="form"
                         data-success-message=".js-form-successMessage"
@@ -51,30 +51,33 @@ description:
                         novalidate>
                         <div class="vList vList_x3">
                             <div>
-                                <label for="name">Name:</label>
+                                <label for="name">Name: <small>(required)</small></label>
                                 <input
                                     type="text"
                                     id="name"
                                     class="input"
                                     name="name"
+                                    aria-required
                                     required>
                             </div>
                             <div>
-                                <label for="email">Email:</label>
+                                <label for="email">Email: <small>(required)</small></label>
                                 <input
                                     type="email"
                                     id="email"
                                     class="input"
                                     name="email"
+                                    aria-required
                                     required>
                             </div>
                             <div>
-                                <label for="phone">Phone:</label>
+                                <label for="phone">Phone: <small>(required)</small></label>
                                 <input
                                     type="tel"
                                     id="phone"
                                     class="input"
                                     name="phone"
+                                    aria-required
                                     required>
                             </div>
                             <div>

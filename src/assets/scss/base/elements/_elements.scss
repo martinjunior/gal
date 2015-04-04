@@ -38,3 +38,7 @@ hr {
 p + p {
     @include pxsToRems(margin-top, 16);
 }
+
+small {
+    font-size: 75%;
+}

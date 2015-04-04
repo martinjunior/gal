@@ -50,6 +50,7 @@ define(function(require, exports, module) {
 
     proto.toggleError = function(index, isValid) {
         this.$inputs.eq(index).toggleClass('input_error', isValid);
+        this.$inputs.eq(index).attr('aria-invalid', isValid);
     }
 
     proto.checkValidity = function($input) {
@@ -66,6 +67,7 @@ define(function(require, exports, module) {
 
     proto.isValid = function() {
         var numOfValidFields = 0;
+        var anInputHasBeenFocused;
         var $input;
         var isValid;
 
@@ -75,6 +77,10 @@ define(function(require, exports, module) {
 
             if (isValid) {
                 numOfValidFields++;
+            } else if (!anInputHasBeenFocused) {
+                $input.focus();
+
+                anInputHasBeenFocused = true;
             }
 
             this.toggleError(i, !isValid);
@@ -119,11 +125,15 @@ define(function(require, exports, module) {
     proto.showMessage = function(success) {
         if (success) {
             this.$successMessage.show();
+            this.$successMessage.attr('tabindex', 0);
+            this.$successMessage.focus();
 
             return;
         }
 
         this.$errorMessage.show();
+        this.$errorMessage.attr('tabindex', 0);
+        this.$errorMessage.focus();
     }
 
     proto._onSuccess = function(data) {
