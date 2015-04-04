@@ -30,12 +30,12 @@
     position: relative;
     z-index: 10;
     background: $COLOR_TERTIARY;
-    transform: translateX(-100%);
+    transform: translateX(-100%) translateZ(0);
     transition: transform .15s cubic-bezier(.55, .34, .83, .67);
 }
 
 .nav.isActive .nav-list {
-    transform: translateX(0);
+    transform: translateX(0) translateZ(0);
     transition: transform .2s .1s cubic-bezier(.55, .34, .83, .67);
 }
 
