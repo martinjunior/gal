@@ -18,6 +18,10 @@ $BLOCKS_GUTTER: $SITE_GUTTERS;
     @include pxsToRems(font-size, removeUnit($ROOT_FONT_SIZE));
 }
 
+.blocks > * + * {
+    @include pxsToRems(margin-top, 5);
+}
+
 .blocks_lg {
     margin: 0;
 }

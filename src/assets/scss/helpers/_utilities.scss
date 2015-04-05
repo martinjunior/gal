@@ -5,3 +5,7 @@
 .isVisuallyHidden {
     @include isVisuallyHidden();
 }
+
+.noScroll {
+    overflow: hidden;
+}

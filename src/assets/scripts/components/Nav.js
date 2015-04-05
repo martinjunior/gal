@@ -3,9 +3,12 @@ define(function(require, exports, module) {
     
     var $ = require('jQuery');
 
+    var $HTML_BODY = $('html, body');
+
     var CLASSES = {
-        IS_ACITVE: 'isActive',
-        BD: 'js-nav-bd'
+        IS_ACTIVE: 'isActive',
+        BD: 'js-nav-bd',
+        NO_SCROLL: 'noScroll'
     }
 
     var Nav = function($element) {
@@ -42,7 +45,8 @@ define(function(require, exports, module) {
     }
 
     proto.toggle = function(shouldActivate) {
-        this.$element.toggleClass(CLASSES.IS_ACITVE, shouldActivate);
+        this.$element.toggleClass(CLASSES.IS_ACTIVE, shouldActivate);
+        $HTML_BODY.toggleClass(CLASSES.NO_SCROLL, shouldActivate);
     }
 
     proto._onClickNav = function(event) {

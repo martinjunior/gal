@@ -4,6 +4,11 @@
 
 $BLOCKS_GUTTER: $SITE_GUTTERS;
 
+.blocks > * {
+    margin: 0;
+}
+
+
 .blocks_lg {
     @include pxsToRems(margin, (-$BLOCKS_GUTTER) 0 0 (-$BLOCKS_GUTTER));
 }
