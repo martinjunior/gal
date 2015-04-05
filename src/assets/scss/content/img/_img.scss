@@ -10,13 +10,3 @@
     border: 4px solid #ffffff;
     box-shadow: 0 0 4px rgba(0, 0, 0, .2);
 }
-
-.img_left {
-    float: left;
-    @include pxsToRems(margin-right, 15);
-}
-
-.img_right {
-    float: right;
-    @include pxsToRems(margin-left, 15);
-}

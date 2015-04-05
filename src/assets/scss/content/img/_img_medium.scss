@@ -1,0 +1,13 @@
+//----------------------------------------------
+// Img
+//----------------------------------------------
+
+.img_left {
+    float: left;
+    @include pxsToRems(margin-right, 15);
+}
+
+.img_right {
+    float: right;
+    @include pxsToRems(margin-left, 15);
+}
