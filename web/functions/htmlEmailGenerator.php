@@ -19,7 +19,10 @@
              // Form won't submit if this field is filled out.
             if ($key !== 'comments' && $key !== 'action') {
                 $htmlEmail .=         '<tr style="border-bottom:1px solid #cccccc;">';
+
+                if ($key !== 'referral') {
                 $htmlEmail .=             '<td style="padding:10px 15px;vertical-align:middle;">' . str_replace('_', ' ', $key) . '</td>';
+                }
 
                 if (is_array($value)) {
                     $htmlEmail .=         '<td style="padding:10px 15px;vertical-align:middle;">';
@@ -33,7 +36,7 @@
                     }
 
                     $htmlEmail .=         '</td>';
-                } else if ($value !== 'referral') {
+                } else if ($key !== 'referral') {
                     $htmlEmail .=         '<td style="padding:10px 15px;vertical-align:middle;">' . $value . '</td>';
                 }
 
