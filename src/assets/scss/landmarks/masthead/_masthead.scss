@@ -3,7 +3,8 @@
 //----------------------------------------------
 
 .masthead {
-    background-image: linear-gradient(to bottom, #f1ecd9, #e0d8ba, #dcd3b2);
+    background: #e0d8ba;
+    background: linear-gradient(to bottom, #f1ecd9, #e0d8ba, #dcd3b2);
     border-bottom: 1px solid darken(#dcd3b2, 10%);
     border-top: 5px solid $COLOR_SECONDARY;
 }

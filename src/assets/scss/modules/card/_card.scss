@@ -10,6 +10,7 @@
 
 .card-hd {
     @include pxsToRems(padding, 10 20 8);
+    background: darken($COLOR_PRIMARY, 10%);
     background: linear-gradient(to right, $COLOR_PRIMARY, darken($COLOR_PRIMARY, 10%));
     color: #ffffff;
 }

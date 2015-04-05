@@ -6,6 +6,7 @@
     @include pxsToRems(padding, 30 0);
     position: relative;
     overflow: hidden;
+    background: darken($COLOR_SECONDARY, 10%);
     background: linear-gradient(to bottom, darken($COLOR_SECONDARY, 5%), darken($COLOR_SECONDARY, 10%));
     box-shadow: inset 0 0 10px rgba(0, 0, 0, .8);
     color: #ffffff;

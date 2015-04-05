@@ -9,6 +9,7 @@
     border-radius: 5px;
     border: none;
     border-bottom: 1px solid darken($COLOR_PRIMARY, 10%);
+    background: darken($COLOR_PRIMARY, 5%);
     background: linear-gradient(to right, $COLOR_PRIMARY, darken($COLOR_PRIMARY, 5%));
     color: #ffffff;
     @include pxsToRems(font-size, 16);
