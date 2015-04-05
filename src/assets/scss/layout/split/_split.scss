@@ -3,5 +3,5 @@
 //----------------------------------------------
 
 .split > * + * {
-    @include pxsToRems(margin-top, 20);
+    @include pxsToRems(margin-top, 30);
 }

@@ -19,6 +19,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+    max-width: 100%;
+}
+
 a {
     color: $COLOR_PRIMARY;
 }
