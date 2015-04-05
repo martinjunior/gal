@@ -8,6 +8,10 @@
     background: $COLOR_FAINT;
 }
 
+.box:target {
+    display: block !important;
+}
+
 .box_success {
     background: #d5efd6;
 }

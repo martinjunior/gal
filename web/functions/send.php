@@ -12,14 +12,24 @@
 
     // Reverse captcha
     if ($_POST['referral'] == '') {
-        echo mail(
-            'martinduranwebdesign@gmail.com',
-            'Website Contact - Great American Landscaping',
-            $htmlEmail,
-            $headers
-        );
+        if ($_POST['javascript_is_disabled']) {
+            mail(
+                'martinduranwebdesign@gmail.com',
+                'Website Contact - Great American Landscaping',
+                $htmlEmail,
+                $headers
+            );
 
-        header('Location: http://mdwd.us/gal/web/');
+            header("Location: http://mdwd.us/gal/web/contact-us.html#success");
+            die();
+        } else {
+            echo mail(
+                'martinduranwebdesign@gmail.com',
+                'Website Contact - Great American Landscaping',
+                $htmlEmail,
+                $headers
+            );
+        }
     }
 
 ?>
