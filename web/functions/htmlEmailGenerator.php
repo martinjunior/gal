@@ -33,7 +33,7 @@
                     }
 
                     $htmlEmail .=         '</td>';
-                } else {
+                } else if ($value !== 'referral') {
                     $htmlEmail .=         '<td style="padding:10px 15px;vertical-align:middle;">' . $value . '</td>';
                 }
 
