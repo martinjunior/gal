@@ -18,6 +18,8 @@
             $htmlEmail,
             $headers
         );
+
+        header('Location: http://mdwd.us/gal/web/');
     }
 
 ?>
